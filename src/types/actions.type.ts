@@ -1,13 +1,14 @@
 import { Picture } from './picture.type';
+import { Option, some, none } from 'fp-ts/Option';
 
 export type Increment = { type: 'INCREMENT' };
 export type Decrement = { type: 'DECREMENT' };
 
-export type SelectPicture = { type: 'SELECT_PICTURE'; picture: Picture };
+export type SelectPicture = { type: 'SELECT_PICTURE'; payload: Option<String>; };
 export type CloseModal = { type: 'CLOSE_MODAL' };
 
 export type FetchCatsRequest = { type: 'FETCH_CATS_REQUEST'; method: 'GET'; path: string };
-export type FetchCatsCommit = { type: 'FETCH_CATS_COMMIT'; payload: unknown }; // TODO : Update this type !
+export type FetchCatsCommit = { type: 'FETCH_CATS_COMMIT'; payload: Picture[] }; // TODO : Update this type !
 export type FetchCatsRollback = { type: 'FETCH_CATS_ROLLBACK'; error: Error };
 
 export type Actions =
