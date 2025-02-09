@@ -1,9 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { getSelectedPicture, picturesSelector, selectPicture } from '../reducer';
+import { getSelectedPicture, picturesSelector } from '../reducer';
 import ModalPortal from './modal';
 import { Option, some, none, isSome } from 'fp-ts/Option';
+import { selectPicture } from '../actions';
 
 const Container = styled.div`
   padding: 1rem;

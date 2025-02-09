@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { counterSelector, decrement, increment } from '../reducer';
+import { counterSelector } from '../reducer';
+import { increment, decrement } from '../actions';
 
 const Container = styled.div`
   padding: 16px;
